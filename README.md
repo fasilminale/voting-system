@@ -18,7 +18,7 @@ vi.insertCompetitor(competitor2);
 Competitor competitor = vi.getCompetitor(9);
 competitor.setCount(competitor.getCount() + 1);
 vi.updateCompetitor(competitor);
-    ```
+```
 
 
 
