@@ -19,6 +19,14 @@ Competitor competitor = vi.getCompetitor(9);
 competitor.setCount(competitor.getCount() + 1);
 vi.updateCompetitor(competitor);
 ```
+###### login example
+```
+User user = getUserByUserNameAndPassword("username", "password");
+if (user != null){
+    //successfull
+    
+}
+```
 
 
 
