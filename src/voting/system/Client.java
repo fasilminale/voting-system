@@ -34,10 +34,16 @@ public class Client {
                          
                          //update count example
                          
-                         Competitor competitor = vi.getCompetitor(9);
-                         competitor.setCount(competitor.getCount() + 1);
+//                         Competitor competitor = vi.getCompetitor(9);
+//                         competitor.setCount(competitor.getCount() + 1);
+//                         
+//                         vi.updateCompetitor(competitor);
+                         Set<Election> elections = vi.getAllElection();
+                         for(Election election:elections){
+                             System.out.println(election.getName());
+                         }
                          
-                         vi.updateCompetitor(competitor);
+                         
                          
                         
 		}
