@@ -323,7 +323,7 @@ public class VotingSystem extends UnicastRemoteObject implements VotingInterface
     }
 
     @Override
-    public Set<Competitor> getAllElection() throws RemoteException {
+    public Set<Election> getAllElection() throws RemoteException {
         Connection connection = ConnectionFactory.getConnection();
         try {
             Statement stmt = connection.createStatement();
