@@ -291,7 +291,7 @@ public class VotingSystem extends UnicastRemoteObject implements VotingInterface
     
     private Election extractElectionFromResultSet(ResultSet rs) throws SQLException {
         Election election= new Election();
-        election.setId( rs.getInt("competitor_id") );
+        election.setId( rs.getInt("election_id") );
         election.setName(rs.getString("name"));
         election.setType(rs.getString("type") );
         election.setDetail(rs.getString("detail") );
@@ -323,7 +323,7 @@ public class VotingSystem extends UnicastRemoteObject implements VotingInterface
     }
 
     @Override
-    public Set<Competitor> getAllElection() throws RemoteException {
+    public Set<Election> getAllElection() throws RemoteException {
         Connection connection = ConnectionFactory.getConnection();
         try {
             Statement stmt = connection.createStatement();
