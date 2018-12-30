@@ -297,6 +297,7 @@ public class VotingSystem extends UnicastRemoteObject implements VotingInterface
         election.setDetail(rs.getString("detail") );
         election.setStatus(rs.getBoolean("status") );
         election.setResult(rs.getString("result") );
+        System.out.print(rs.getString("result") );
         
         
 
@@ -311,6 +312,7 @@ public class VotingSystem extends UnicastRemoteObject implements VotingInterface
             ResultSet rs = stmt.executeQuery("SELECT * FROM Elections WHERE election_id=" + id);
             if(rs.next())
             {
+//                System.out.print(extractElectionFromResultSet(rs).getName());
                 return extractElectionFromResultSet(rs);
             }
         }catch (SQLException ex) {
